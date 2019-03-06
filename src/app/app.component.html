@@ -16,14 +16,14 @@
         <clr-tab>
           <button clrTabLink>Vocabulary</button>
           <clr-tab-content *clrIfActive>
-            ...
+            <app-word-selector [completedWord]="[]" (select)="wordsSelected($event)"></app-word-selector>
           </clr-tab-content>
         </clr-tab>
 
-        <clr-tab>
+        <clr-tab *ngIf="trainingList.length">
           <button clrTabLink>Training</button>
           <clr-tab-content *clrIfActive>
-            ...
+              {{ trainingList }}
           </clr-tab-content>
         </clr-tab>
 

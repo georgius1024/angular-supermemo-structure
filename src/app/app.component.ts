@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { VocabularyItem } from './word-selector/word-selector.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'supermemo';
+  trainingList: Array<VocabularyItem> = []
+  wordsSelected(list: Array<VocabularyItem>) {
+    this.trainingList = list;
+  }
 }
