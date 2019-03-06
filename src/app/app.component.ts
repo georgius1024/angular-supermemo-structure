@@ -7,6 +7,7 @@ import { VocabularyItem } from './word-selector/word-selector.component';
 })
 export class AppComponent {
   title = 'supermemo';
+  options: any;
   trainingList: Array<VocabularyItem> = []
   wordsSelected(list: Array<VocabularyItem>) {
     this.trainingList = list;

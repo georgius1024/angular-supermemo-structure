@@ -23,14 +23,32 @@
         <clr-tab *ngIf="trainingList.length">
           <button clrTabLink>Training</button>
           <clr-tab-content *clrIfActive>
-              {{ trainingList }}
+            <app-word-sorter [trainingList]="trainingList"></app-word-sorter>
           </clr-tab-content>
         </clr-tab>
 
         <clr-tab>
           <button clrTabLink>Settings</button>
           <clr-tab-content *clrIfActive>
-            ...
+            <clr-input-container>
+                <label>Words count</label>
+                <input type="number" min=1 max=10 clrInput placeholder="Words count" name="name" />
+            </clr-input-container>            
+            <clr-toggle-container>
+              <label>Select languages</label>
+              <clr-toggle-wrapper>
+                <input type="checkbox" clrToggle name="options" required value="English" />
+                <label>English</label>
+              </clr-toggle-wrapper>
+              <clr-toggle-wrapper>
+                <input type="checkbox" clrToggle name="options" required value="Spain"  disabled/>
+                <label>Spain</label>
+              </clr-toggle-wrapper>
+              <clr-toggle-wrapper>
+                <input type="checkbox" clrToggle name="options" required value="French" disabled/>
+                <label>French</label>
+              </clr-toggle-wrapper>
+            </clr-toggle-container>
           </clr-tab-content>
         </clr-tab>
       </clr-tabs>

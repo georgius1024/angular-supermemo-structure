@@ -5,8 +5,8 @@
         <button type="button" class="close" aria-label="Close" (click)="removeWord(item.word)">
           <clr-icon aria-hidden="true" shape="close"></clr-icon>
         </button>
-        {{ item.word }}
+        {{ item.word }} {{ item.transcription }} {{ item.translation }}
       </li>
     </ul>
   </div>    
-  <button class="btn btn-primary" (click)="done()" [disabled]="selectedWords.length===0">Done</button>
+  <button class="btn btn-primary" (click)="done()" [disabled]="selectedWords.length===0">Start training</button>
