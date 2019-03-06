@@ -1,27 +1,38 @@
-# Supermemo
+# About
+Четырнадцатая домашняя работа в потоке javascript-2018-10 OTUS
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.2.
+# Description
+Структура приложения для запоминания иностранных слов
+Приложение для запоминания иностранных слов. 
+В этом приложении пользователь сможет добавлять слова для изучения, проходить тесты для запоминания слов. 
+Это Single Page Application состоит из 3 страниц:
+* Последние добавленные слова (Recently Added)
+* Упражнениями (Go)
+* Настройки (Settings)
+На главном экране, на странице Recently Added пользователь видит список последних добавленных слов, может добавить новое слово в словарь.
 
-## Development server
+На странице упражнений пользователь занимается тестированием своих знаний. Ему показывается слово на одном языке, и он должен написать его перевод на другой язык. Если перевод правильный, слово засчитывается, иначе показываем ошибку. Мы начнем с двух языков - русского и английского, будем расширять возможности приложения по мере написания программы.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+На странице настроек пользователь выбирает языки, количество слов в упражнении, отводимое на упражнение время.
 
-## Code scaffolding
+# How to
+1) Клонируем репозиторий 
+  `git clone https://github.com/georgius1024/angular-supermemo-structure.git`
+2) Переходим в папку angular-supermemo-structure
+  `cd angular-supermemo-structure`
+3) запускаем npm, произойдет установка зависимостей
+  `npm i`
+4) запускаем dev-server
+  `npm run start`
+5) Выбираем пятерку слов и тренируемся
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# Notes
+* Проект был создан с помощью Clarity Design System https://clarity.design
+* Список слов с http://studynow.ru/dicta/allwords/
+* Приложение по отдаленным мотивам Supermemo
+* Пользователь берет пятерку ранее неизученных слов и в несколько приемов разучивает их.
+* Предусматриваются два упражнения:
+   - установка соответствия слов и переводов 
+   - расстановка букв слова в правильном порядке. 
+   В этом проекте реализовано только первое. 
+* Навигацию пока не делал, простые tabs-ы
